@@ -1,3 +1,8 @@
+@extends('layouts.admin.master')
+ 
+@section('content')
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,26 +61,18 @@
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
+
+
+    	@foreach($new_produks as $produk)
+
 		<div class="swiper-slide">
 			<div class="swiper-zoom-container">
-				<img src="image/menu1.jpg"/>
+				<img src="{{ $produk->photo }}"/>
 			</div>
 		</div>
-		<div class="swiper-slide">
-			<div class="swiper-zoom-container">
-				<img src="image/menu2.jpg"/>
-			</div>
-		</div>
-		<div class="swiper-slide">
-			<div class="swiper-zoom-container">
-				<img src="image/menu3.jpg"/>
-			</div>
-		</div>
-		<div class="swiper-slide">
-			<div class="swiper-zoom-container">
-				<img src="image/menu4.jpg"/>
-			</div>
-		</div>
+		@endforeach
+
+
 		<div class="swiper-slide">
 			<div class="swiper-zoom-container" bac>
 				<a href="https://www.facebook.com" target="_blank" style="position: absolute; top: 100px; left: 800px; "><h1 style="font-size: 4vw; color: white;">Facebook</h1></a>
@@ -95,6 +92,10 @@
     </div>
     <div class="swiper-pagination"></div>
   </div>
+  @endsection
+
+  @section('scripts')
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
@@ -124,6 +125,26 @@
 			}
 		});
 	});		
-  </script>
+   </script>
+
+
+ 
+	<script type="text/javascript">
+	    $(document).ready(function(){
+	 
+	        // btn refresh
+	        $('.btn-refresh').click(function(e){
+	            e.preventDefault();
+	            $('.preloader').fadeIn();
+	            location.reload();
+	        })
+	 
+	    })
+	</script>
+ 
+@endsection
+
+
+
 </body>
 </html>

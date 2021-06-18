@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('swiper-slide');
 });
+
+Route::get('/cms/produk', 'ProdukController@index');
+Route::get('/cms/produk/create', 'ProdukController@create');
+Route::post('/cms/produk/add', 'ProdukController@store');
+// Route::get('/cms/produk/edit/{id}', 'ProdukController@update');
