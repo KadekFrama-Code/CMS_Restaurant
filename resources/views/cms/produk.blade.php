@@ -1,16 +1,16 @@
-@extends('layouts.admin.master')
+@extends('layouts.admin-stisla.master')
  
 @section('content')
  
 <div class="row">
     <div class="col-md-12">
-        <h2>{{ $title }}</h2>
+        <h2></h2>
         <div class="box box-warning">
             <div class="box-header">
                 <p>
                     <button class="btn btn-sm btn-flat btn-warning btn-refresh"><i class="fa fa-refresh"></i> Refresh</button>
 
-                    <a href="{{ url('/cms/produk/create') }}" class="btn btn-sm btn-flat btn-primary"><i class="fa fa-refresh"></i> Tambah Produk</a>
+                    <a href="{{ url('/cms/produk/create') }}" class="btn btn-sm btn-flat btn-primary"><i class="fa fa-refresh"></i> Tambah Menu</a>
                 </p>
             </div>
             <div class="box-body">
@@ -36,10 +36,10 @@
                   <td>{{ $produk->created_at }}</td>
                   <td>
                     <center>
-                      <div style="width:60px">
-                        <a href="#" class="btn btn-warning btn-xs btn-edit" id="edit"><i class="fa fa-pencil-square-o"></i></a>
+                      <div style="width:100px">
+                        <a href="#" class="btn btn-warning btn-xs btn-edit" id="edit"><i class="fas fa-pencil-alt"></i></a>
 
-                        <button href="#" class="btn btn-danger btn-xs btn-hapus" id="delete"><i class="fa fa-trash-o"></i></button>
+                        <button href="#" class="btn btn-danger btn-xs btn-hapus" id="delete"><i class="fas fa-trash"></i></button>
                       </div>
                     </center>
                     

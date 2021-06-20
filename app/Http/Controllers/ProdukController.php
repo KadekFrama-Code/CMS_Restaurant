@@ -10,7 +10,7 @@ class ProdukController extends Controller
 {
     public function index()
     {
-    	$title = 'List Produk';
+    	$title = 'List Menu';
     	$prd = Produk::orderBy('id', 'asc')->get();
 
     	return view('cms.produk', compact('title', 'prd'));
@@ -18,14 +18,15 @@ class ProdukController extends Controller
 
     public function index2()
     {
-    	$new_produks = Produk::orderBy('id','asc')->get();
+    	$title = 'Swiper Slide';
+    	$produks = Produk::orderBy('id','asc')->get();
 
-    	return view('swiper-slide', compact('new_produks'));
+    	return view('swiper-slide', compact('produks', 'title'));
     }
 
     public function create()
     {
-    	$title = 'Tambah data produk';
+    	$title = 'Tambah Data Menu';
     	return view('cms.create', compact('title'));
     }
 
