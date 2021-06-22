@@ -76,34 +76,169 @@
 		left: 20px;
 	}
 	.btn_whatsapp{
-		position: relative;
-		top: 60px;
+		position: absolute;
+		top: 120px;
 		left: 200px;
-		height: 80px;
+		height: 64px;
 		width: 260px;
-		border: green 10px solid;
+		border: #3CB371 3px solid;
 		border-radius: 10px;
 		color: blue
 		background: #22a4cf;
 		text-decoration: none;
-		opacity: 6;
-
-
+		opacity: 1;
+	}
+	.btn_telegram{
+		position: absolute;
+		top: 120px;
+		left: 495px;
+		height: 64px;
+		width: 260px;
+		border: #4169E1 3px solid;
+		border-radius: 10px;
+		color: blue
+		background: #22a4cf;
+		text-decoration: none;
+		opacity: 1;
+	}
+	.sosial_media{
+		position: relative;
+		top: 254px;
+		left: 302px;
+		height: 100px;
+		width: 390px;
+	}
+	.sosmed-fb, .sosmed-wa, .sosmed-tiktok, .sosmed-ig{
+		position: absolute;
+		z-index: 2;
+		height: 60px;
+		width: 60px;
+		background-size: cover;
+		border-radius: 740%;
+		top: 16px;
 	}
 
 	@media only screen and (max-width: 600px) {
   	.google_map{
   		width: 80%;
-  		height: 28%;
-	    top: 340px !important;
+  		height: 20%;
+	    top: 380px !important;
 	    left: 8px;
+	    z-index: 2;
   	}
   	.text_content{
 	  	position: relative;
 	    z-index: 20;
 	    top: 320px;
 	    left: 12px;
-	  	}
+	}
+	.contact_us{
+		position: relative;
+		font-size: 16px;
+		font-family: serif;
+		bottom: 40px;
+	}
+	.alamat{
+		position: relative;
+		font-size: 12px;
+		font-family: serif;
+		bottom: 40px;
+	}
+	.btn_whatsapp{
+		position: absolute;
+		top: 46px;
+		left: 50px;
+		z-index: 2;
+		height: 30px;
+		width: 120px;
+
+		border: #3CB371 2px solid;
+		border-radius: 8px;
+		color: blue
+		background: #22a4cf;
+		text-decoration: none;
+		opacity: 1;
+	}
+	.icon_wa{
+		position: absolute;
+		top: 3px !important;
+		left: 6px;
+		width: 20%;
+		height:74% !important;
+
+
+	}
+	.no_telp{
+		position: absolute;
+		top: 4px !important;
+		left: 34px !important;
+		font-size: 12px !important;
+	}
+	.btn_telegram{
+		position: absolute;
+		top: 46px;
+		left: 180px;
+		z-index: 2;
+		height: 30px;
+		width: 120px;
+
+		border: #4169E1 2px solid;
+		border-radius: 8px;
+		color: blue
+		background: #22a4cf;
+		text-decoration: none;
+		opacity: 1;
+	}
+	.icon_telegram{
+		position: absolute;
+		top: 3px !important;
+		left: 14px;
+		width: 20%;
+		height:74% !important;
+	}
+	.username_telegram{
+		position: absolute;
+		top: 4px !important;
+		left: 42px !important;
+		font-size: 12px !important;
+	}
+	.sosial_media{
+		position: relative;
+		top: 400px;
+		left: 40px;
+		height: 120px;
+		width: 292px;
+	}
+	.sosmed-fb{
+		position: absolute;
+		z-index: 2;
+		height: 30px;
+		width: 30px;
+		left: 60px !important;
+	}
+	.sosmed-wa{
+		position: absolute;
+		z-index: 2;
+		height: 30px;
+		width: 30px;
+		left: 110px !important;
+	}
+	.sosmed-tiktok{
+		position: absolute;
+		z-index: 2;
+		height: 30px;
+		width: 30px;
+		left: 158px !important;
+	}
+	.sosmed-ig{
+		position: absolute;
+		z-index: 2;
+		height: 30px;
+		width: 30px;
+		left: 206px !important;
+	}
+
+
 
 }
 
@@ -122,27 +257,48 @@
 						<div class="row custom_content">
 							<div class="col-12 text-center">
 								<div class="text_content">
-									<h1 style="font-size: 1.5vw; color: black;">Contack Us</h1>
-									<h5>Jln. Kampus Unud No. 120 B, Badung, Bali (80361)</h5>
+									<h2 class="contact_us" color: black;">Contack Us</h1>
+									<h5 class="alamat">Jln. Kampus Unud No. 120 B, Badung, Bali (80361)</h5>
 
 
-									<div class="btn_whatsapp">
-										<a href="#">
-										<img src="image/wa.jpg" style="position: relative; width: 20%; height:80%; top: 6px; right: 80px; ">
-										<p style=" font-size: 20px;  position: relative; text-decoration: none; bottom: 34px; left: 40px;">085792459736</p>
-									</a>
-									</div>
+										<a class="btn_whatsapp" href="#">
+											<img class="icon_wa" src="image/wa.jpg" style="position: absolute; width: 14%; height:60%; top: 12px; right: 180px;">
+											<p class="no_telp" style=" font-size: 20px; color: green;  position: absolute; text-decoration: none; bottom: -2px; left: 94px;">085792459736</p>
+										</a>
+
+										<a class="btn_telegram" href="#">
+											<center>
+												<img class="icon_telegram" src="image/telegram.jpg" style="position: absolute; width: 14%; height:60%; top: 12px; right: 174px;">
+												<p class="username_telegram" style=" font-size: 20px; color: blue;  position: absolute; text-decoration: none; bottom: -2px; left: 94px;">Test12345</p>
+											</center>
+											
+										</a>
 									
 								</div>
 
 								<iframe
 								   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.5575034162507!2d115.25313961478382!3d-8.638407293792397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23f76c9cfbf27%3A0x730a22a11d8a0857!2sBali%20Creative%20Industry%20Center!5e0!3m2!1sen!2sid!4v1623899782007!5m2!1sen!2sid"
-								   width="600" height="450" style="position: relative; top: 160px; left: 10px;" class="google_map" allowfullscreen="" loading="lazy"
+								   width="600" height="450" style="position: relative; top: 214px; left: 10px;" class="google_map" allowfullscreen="" loading="lazy"
 								   width="1400"
 								   height="800"
 								   frameborder="0">
 
 								</iframe>
+
+								<div class="sosial_media">
+									<a class="sosmed-fb" href="#" style="background-image: url('image/fb.jpg'); left: 34px;">
+										
+									</a>
+									<a class="sosmed-wa" href="#" style="background-image: url('image/wa.jpg'); left: 123px;">
+										
+									</a>
+									<a class="sosmed-tiktok" href="#" style="background-image: url('image/tiktok.png'); left: 212px;">
+										
+									</a>
+									<a class="sosmed-ig" href="#" style="background-image: url('image/ig.jpg'); left:300px;">
+										
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
