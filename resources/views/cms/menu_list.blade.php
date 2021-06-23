@@ -22,20 +22,28 @@
                     <th>No</th>
                     <th>Nama</th>
                     <th>Deskripsi</th>
-                    <th>Gambar</th>
-                    <th>Tanggal Upload</th>
+                    <th>Photo</th>
+                    <th>Gambar Posisi</th>
+                    <th>Gambar Label</th>
+                    <th>Gambar URL</th>
+                    <th>Tgl Upload</th>
+                    <th>Tgl Update</th>
                     <th><center>Action</center></th>
                   </tr></thead>
                 <tbody>
-                @foreach($prd as $index=>$produk)
+                @foreach($menus as $index=>$menu)
                 <tr>
                   <td>{{ $index+1 }}</td>
-                  <td>{{ $produk->nama }}</td>
-                  <td>{{ $produk->deskripsi }}</td>
+                  <td>{{ $menu->nama }}</td>
+                  <td>{{ $menu->deskripsi }}</td>
                   <td>
-                    <img src="{{ asset($produk->photo) }}" style="height: 100px; width: 80px;">
+                    <img src="{{ asset($menu->photo) }} " style="width: 80px;">
                   </td>
-                  <td>{{ $produk->created_at }}</td>
+                  <td>{{ $menu->gambar_posisi }}</td>
+                  <td>{{ $menu->gambar_labe }}</td>
+                  <td>{{ $menu->gambar_url }}</td>
+                  <td>{{ $menu->created_at }}</td>
+                  <td>{{ $menu->updated_at }}</td>
                   <td>
                     <center>
                       <div style="width:100px">

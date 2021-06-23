@@ -30,6 +30,21 @@
                       <input type="file" class="form-control" name="photo" id="exampleInputfile" autocomplete="off">
                     </div>
 
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Gambar Posisi</label>
+                      <input type="text" name="gambar_posisi" class="form-control" id="exampleInputEmail1" placeholder="Posisi Gambar">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Gambar Label</label>
+                      <input type="text" name="gambar_label" class="form-control" id="exampleInputEmail1" placeholder="Mobile/Desktop">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Gambar URL</label>
+                      <input type="text" name="gambar_url" class="form-control" id="exampleInputEmail1" placeholder="URL Gambar">
+                    </div>
+
               </div>
               <!-- /.box-body -->
  

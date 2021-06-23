@@ -36,10 +36,10 @@ Route::get('/', function () {
 
 
 Route::group(['middleware' => ['auth:user,client', 'ceklevel:admin,adminclient']], function(){
-	Route::get('/produk', 'ProdukController@index2');
-	Route::get('/cms/produk', 'ProdukController@index');
-	Route::get('/cms/produk/create', 'ProdukController@create');
-	Route::post('/cms/produk/add', 'ProdukController@store');
+	Route::get('/produk', 'MenulistController@index2');
+	Route::get('/cms/produk', 'MenulistController@index');
+	Route::get('/cms/produk/create', 'MenulistController@create');
+	Route::post('/cms/produk/add', 'MenulistController@store');
 });
 
 

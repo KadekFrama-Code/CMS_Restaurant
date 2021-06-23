@@ -305,11 +305,11 @@
 				</div>
 			</div>
 
-    	@foreach($produks as $produk)
+    	@foreach($menulist as $menu)
 
 		<div class="swiper-slide">
 			<div class="swiper-zoom-container">
-				<img src="{{ $produk->photo }}"/>
+				<img src="{{ $menu->photo }}"/>
 			</div>
 		</div>
 		@endforeach

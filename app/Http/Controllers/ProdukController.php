@@ -32,22 +32,21 @@ class ProdukController extends Controller
 
     public function store(Request $request)
     {
-    	$this->validate($request,[
-            'nama' => 'required',
-    		'deskripsi' => 'required'
-    	]);
 
     	$file = $request->file('photo');
         if($file){
-            $file->move('image', $file->getClientOriginalName());
-            $produks['photo'] = 'image/'.$file->getClientOriginalName();
+            $nama_file = $file->getClientOriginalName();
+            $file->move('image', $nama_file);
+            $produks = 'image/'.$nama_file;
+        }else{
+            $produks = null;
         }
 
-    	$produks ['nama'] = $request->nama;
-    	$produks['deskripsi'] = $request->deskripsi;
-    	$produks['created_at'] = date('Y-m-d H:i:s');
-
-        Produk::insert($produks);
+        $produks = new Produk;
+    	$produks->nama = $request->nama;
+    	$produks->deskripsi = $request->deskripsi;
+    	$produks->created_at = date('Y-m-d H:i:s');
+        $produks->save();
 
         return redirect()->back();
     }
