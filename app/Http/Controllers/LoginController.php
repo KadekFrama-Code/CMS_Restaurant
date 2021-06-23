@@ -13,7 +13,7 @@ class LoginController extends Controller
     	if(Auth::guard('client')->attempt(['email' => $request->email, 'password' => $request->password])){
     		return redirect('/produk');
     	}elseif(Auth::guard('user')->attempt(['email' => $request->email, 'password' => $request->password])){
-            return redirect('/produk');
+            return redirect('/cms/produk');
         }
     	return redirect('/login');
     }

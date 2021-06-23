@@ -39,7 +39,6 @@
       -webkit-box-align: center;
       -ms-flex-align: center;
       -webkit-align-items: center;
-      align-items: center;
     }
 	
 	.swiper-slide img{
@@ -119,123 +118,123 @@
 	}
 
 	@media only screen and (max-width: 600px) {
-  	.google_map{
-  		width: 80%;
-  		height: 20%;
-	    top: 380px !important;
-	    left: 8px;
-	    z-index: 2;
-  	}
-  	.text_content{
-	  	position: relative;
-	    z-index: 20;
-	    top: 320px;
-	    left: 12px;
-	}
-	.contact_us{
-		position: relative;
-		font-size: 16px;
-		font-family: serif;
-		bottom: 40px;
-	}
-	.alamat{
-		position: relative;
-		font-size: 12px;
-		font-family: serif;
-		bottom: 40px;
-	}
-	.btn_whatsapp{
-		position: absolute;
-		top: 46px;
-		left: 50px;
-		z-index: 2;
-		height: 30px;
-		width: 120px;
+	  	.google_map{
+	  		width: 80%;
+	  		height: 20%;
+		    top: 380px !important;
+		    left: 8px;
+		    z-index: 2;
+	  	}
+	  	.text_content{
+		  	position: relative;
+		    z-index: 20;
+		    top: 320px;
+		    left: 12px;
+		}
+		.contact_us{
+			position: relative;
+			font-size: 16px;
+			font-family: serif;
+			bottom: 40px;
+		}
+		.alamat{
+			position: relative;
+			font-size: 12px;
+			font-family: serif;
+			bottom: 40px;
+		}
+		.btn_whatsapp{
+			position: absolute;
+			top: 46px;
+			left: 50px;
+			z-index: 2;
+			height: 30px;
+			width: 120px;
 
-		border: #3CB371 2px solid;
-		border-radius: 8px;
-		color: blue
-		background: #22a4cf;
-		text-decoration: none;
-		opacity: 1;
-	}
-	.icon_wa{
-		position: absolute;
-		top: 3px !important;
-		left: 6px;
-		width: 20%;
-		height:74% !important;
+			border: #3CB371 1px solid;
+			border-radius: 8px;
+			color: blue
+			background: #22a4cf;
+			text-decoration: none;
+			opacity: 1;
+		}
+		.icon_wa{
+			position: absolute;
+			top: 3px !important;
+			left: 6px;
+			width: 20%;
+			height:74% !important;
 
 
-	}
-	.no_telp{
-		position: absolute;
-		top: 4px !important;
-		left: 34px !important;
-		font-size: 12px !important;
-	}
-	.btn_telegram{
-		position: absolute;
-		top: 46px;
-		left: 180px;
-		z-index: 2;
-		height: 30px;
-		width: 120px;
+		}
+		.no_telp{
+			position: absolute;
+			top: 4px !important;
+			left: 34px !important;
+			font-size: 12px !important;
+		}
+		.btn_telegram{
+			position: absolute;
+			top: 46px;
+			left: 180px;
+			z-index: 2;
+			height: 30px;
+			width: 120px;
 
-		border: #4169E1 2px solid;
-		border-radius: 8px;
-		color: blue
-		background: #22a4cf;
-		text-decoration: none;
-		opacity: 1;
-	}
-	.icon_telegram{
-		position: absolute;
-		top: 3px !important;
-		left: 14px;
-		width: 20%;
-		height:74% !important;
-	}
-	.username_telegram{
-		position: absolute;
-		top: 4px !important;
-		left: 42px !important;
-		font-size: 12px !important;
-	}
-	.sosial_media{
-		position: relative;
-		top: 400px;
-		left: 40px;
-		height: 120px;
-		width: 292px;
-	}
-	.sosmed-fb{
-		position: absolute;
-		z-index: 2;
-		height: 30px;
-		width: 30px;
-		left: 60px !important;
-	}
-	.sosmed-wa{
-		position: absolute;
-		z-index: 2;
-		height: 30px;
-		width: 30px;
-		left: 110px !important;
-	}
-	.sosmed-tiktok{
-		position: absolute;
-		z-index: 2;
-		height: 30px;
-		width: 30px;
-		left: 158px !important;
-	}
-	.sosmed-ig{
-		position: absolute;
-		z-index: 2;
-		height: 30px;
-		width: 30px;
-		left: 206px !important;
+			border: #4169E1 1px solid;
+			border-radius: 8px;
+			color: blue
+			background: #22a4cf;
+			text-decoration: none;
+			opacity: 1;
+		}
+		.icon_telegram{
+			position: absolute;
+			top: 3px !important;
+			left: 14px;
+			width: 20%;
+			height:74% !important;
+		}
+		.username_telegram{
+			position: absolute;
+			top: 4px !important;
+			left: 42px !important;
+			font-size: 12px !important;
+		}
+		.sosial_media{
+			position: relative;
+			top: 400px;
+			left: 40px;
+			height: 120px;
+			width: 292px;
+		}
+		.sosmed-fb{
+			position: absolute;
+			z-index: 2;
+			height: 30px;
+			width: 30px;
+			left: 60px !important;
+		}
+		.sosmed-wa{
+			position: absolute;
+			z-index: 2;
+			height: 30px;
+			width: 30px;
+			left: 110px !important;
+		}
+		.sosmed-tiktok{
+			position: absolute;
+			z-index: 2;
+			height: 30px;
+			width: 30px;
+			left: 158px !important;
+		}
+		.sosmed-ig{
+			position: absolute;
+			z-index: 2;
+			height: 30px;
+			width: 30px;
+			left: 206px !important;
 	}
 
 
@@ -252,7 +251,7 @@
     		<div class="swiper-slide">
 				<div class="swiper-zoom-container" >
 					<div class="background_footer">
-						<img src="image/MENU LIST 9.jpg"/>
+						<img class="background_img" src="image/MENU LIST 9.jpg"/>
 
 						<div class="row custom_content">
 							<div class="col-12 text-center">
