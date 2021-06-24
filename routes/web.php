@@ -29,17 +29,25 @@ Route::get('/', function () {
 	Route::get('/register', 'RegisterClientController@add')->name('register');
 	Route::post('/postregister', 'RegisterClientController@postregister')->name('postregister');
 
+	Route::get('/daftar-clients', 'RegisterClientController@list_client');
+
 /*Logout Route*/
 	Route::get('/keluar', 'LoginController@logout')->name('logout');
 
 
 
 
-Route::group(['middleware' => ['auth:user,client', 'ceklevel:admin,adminclient']], function(){
+Route::group(['middleware' => ['auth:user', 'ceklevel:admin']], function(){
 	Route::get('/produk', 'MenulistController@index2');
 	Route::get('/cms/produk', 'MenulistController@index');
 	Route::get('/cms/produk/create', 'MenulistController@create');
 	Route::post('/cms/produk/add', 'MenulistController@store');
+
+
+	Route::get('/cms/seo-setting/', 'SeosettingController@index');
+	// Route::get('/cms/seo-setting/{id}', 'SeosettingController@store');
+	Route::get('/cms/seo-setting/{id}', 'SeosettingController@edit');
+	Route::put('/cms/seo-setting/{id}', 'SeosettingController@update');
 });
 
 

@@ -103,7 +103,7 @@
 	.sosial_media{
 		position: relative;
 		top: 254px;
-		left: 302px;
+		left: 602px;
 		height: 100px;
 		width: 390px;
 	}
@@ -235,11 +235,168 @@
 			height: 30px;
 			width: 30px;
 			left: 206px !important;
+		}
+		.swiper-pagination-bullet{
+			height: 10px;
+			width: 10px;
+		}
+		
+	}
+
+	@media only screen 
+		and (min-device-width: 768px)  {
+		.btn_whatsapp {
+		    position: absolute;
+		    top: 120px;
+		    left: 201px !important;
+		    height: 64px;
+		    width: 260px;
+		    border: #3CB371 3px solid;
+		    border-radius: 10px;
+		    color: blue background: #22a4cf;
+		    text-decoration: none;
+		    opacity: 1;
+		}
+		.btn_telegram {
+		    position: absolute;
+		    top: 120px;
+		    left: 499px !important;
+		    height: 64px;
+		    width: 260px;
+		    border: #4169E1 3px solid;
+		    border-radius: 10px;
+		    color: blue background: #22a4cf;
+		    text-decoration: none;
+		    opacity: 1;
+		}
+		.sosial_media {
+		    position: relative;
+		    top: 254px;
+		    left: 302px !important;
+		    height: 100px;
+		    width: 390px;
+		}
 	}
 
 
+	@media only screen 
+	  and (min-device-width: 768px) 
+	  and (max-device-width: 1024px) 
+	  and (orientation: landscape) 
+	  and (-webkit-min-device-pixel-ratio: 1) {
+	  	.swiper-zoom-container {
+		    width: 100%;
+		    height: 100%;
+		    display: flex;
+		    justify-content: center;
+		    /* align-items: center; */
+		    text-align: center;
+		}
+		.swiper-slide img {
+		    height: 766px;
+		    width: 1000px;
+		}
+		.google_map{
+			width: 400px !important;
+		    height: 340px !important;
+		    top: 176px !important;
+		    left: 8px;
+		    z-index: 2;
+		}
+		.btn_whatsapp {
+		    position: absolute;
+		    top: 96px;
+		    left: 260px !important;
+		    height: 48px;
+		    width: 220px;
+		    border: #3CB371 3px solid;
+		    border-radius: 10px;
+		    color: blue background: #22a4cf;
+		    text-decoration: none;
+		    opacity: 1;
+		}
+		.btn_telegram {
+		    position: absolute;
+		    top: 96px;
+		    left: 494px !important;
+		    height: 48px;
+		    width: 220px;
+		    border: #4169E1 3px solid;
+		    border-radius: 10px;
+		    color: blue background: #22a4cf;
+		    text-decoration: none;
+		    opacity: 1;
+		}
+		.no_telp {
+		    position: absolute;
+		    top: 6px;
+		    left: 19px !important;
+		    height: 50px;
+		    width: 220px;
+		}
+		.text_content {
+		    position: relative;
+		    top: 60px;
+		    left: 11px;
+		}
+		.icon_wa {
+		    position: absolute;
+		    width: 14%;
+		    height: 60%;
+		    top: 9px !important;
+		    right: 158px !important;
+		}
+		.username_telegram{
+			font-size: 20px;
+		    color: blue;
+		    position: absolute;
+		    text-decoration: none;
+		    bottom: -8px !important;
+		    left: 90px !important;
+		}
+		.icon_telegram{
+			position: absolute;
+		    width: 14%;
+		    height: 68%;
+		    top: 7px !important;
+		    right: 144px !important;
+		}
+		.sosial_media {
+		    position: relative;
+		    top: 187px;
+		    left: 302px !important;
+		    height: 119px;
+		    width: 400px;
+		}
+		.sosmed-fb, .sosmed-wa, .sosmed-tiktok, .sosmed-ig {
+		    position: absolute;
+		    z-index: 2;
+		    height: 50px;
+		    width: 50px;
+		    background-size: cover;
+		    border-radius: 740%;
+		    top: 16px;
+		}
 
-}
+	}
+
+
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 812px) 
+	  and (-webkit-min-device-pixel-ratio: 3)
+	  and (orientation: landscape) {
+	   .swiper-zoom-container {
+		    width: 100%;
+		    height: 100%;
+		    display: flex;
+		    justify-content: center;
+		     align-items: center; 
+		    text-align: center;
+		}
+
+	}
+
 
   </style>
 </head>
@@ -256,7 +413,7 @@
 						<div class="row custom_content">
 							<div class="col-12 text-center">
 								<div class="text_content">
-									<h2 class="contact_us" color: black;">Contack Us</h1>
+									<h2 class="contact_us" color: black;">Contact Us</h1>
 									<h5 class="alamat">Jln. Kampus Unud No. 120 B, Badung, Bali (80361)</h5>
 
 
@@ -305,7 +462,7 @@
 				</div>
 			</div>
 
-    	@foreach($menulist as $menu)
+		@foreach($menulist as $menu)
 
 		<div class="swiper-slide">
 			<div class="swiper-zoom-container">
@@ -313,6 +470,7 @@
 			</div>
 		</div>
 		@endforeach
+    	
 
 
 		

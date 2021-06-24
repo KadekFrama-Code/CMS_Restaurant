@@ -9,41 +9,29 @@
             <div class="box-header">
                 <p>
                     <button class="btn btn-sm btn-flat btn-warning btn-refresh"><i class="fa fa-refresh"></i> Refresh</button>
-
-                    <a href="{{ url('/cms/produk/create') }}" class="btn btn-sm btn-flat btn-primary"><i class="fa fa-refresh"></i> Tambah Menu</a>
                 </p>
             </div>
             <div class="box-body">
             	<div class="box-body table-responsive no-padding">
-              <table class="table table-hover" id="example1">
+              <table class="table table-striped" id="example1">
                 <span style="color: red;"><small></small></span>
                 <thead>
                   <tr>
                     <th>No</th>
                     <th>Nama</th>
-                    <th>Deskripsi</th>
-                    <th>Photo</th>
-                    <th>Gambar Posisi</th>
-                    <th>Gambar Label</th>
-                    <th>Gambar URL</th>
+                    <th>Username</th>
+                    <th>Email</th>
                     <th>Tgl Upload</th>
-                    <th>Tgl Update</th>
                     <th><center>Action</center></th>
                   </tr></thead>
                 <tbody>
-                @foreach($menus as $index=>$menu)
+                @foreach($clients as $index=>$client)
                 <tr>
                   <td>{{ $index+1 }}</td>
-                  <td>{{ $menu->nama }}</td>
-                  <td>{{ $menu->deskripsi }}</td>
-                  <td>
-                    <img src="{{ asset($menu->photo) }} " style="width: 80px;">
-                  </td>
-                  <td>{{ $menu->gambar_posisi }}</td>
-                  <td>{{ $menu->gambar_labe }}</td>
-                  <td>{{ $menu->gambar_url }}</td>
-                  <td>{{ $menu->created_at }}</td>
-                  <td>{{ $menu->updated_at }}</td>
+                  <td>{{ $client->name }}</td>
+                  <td>{{ $client->username }}</td>
+                  <td>{{ $client->email }}</td>
+                  <td>{{ $client->created_at }}</td>
                   <td>
                     <center>
                       <div style="width:100px">
@@ -57,11 +45,6 @@
                 </tr>
                 @endforeach
               </tbody>
-              <tfoot>
-                <th>
-                  <p>TEST123</p>
-                </th>
-              </tfoot>
             </table>
             </div>
             </div>

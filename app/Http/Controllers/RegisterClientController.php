@@ -42,4 +42,12 @@ class RegisterClientController extends Controller
     		return redirect('/');
 
     }
+
+    public function list_client()
+    {
+        $title = 'List Clients Terdaftar';
+        $clients = Client::orderBy('id', 'asc')->get();
+
+        return view('cms.client.index', compact('title', 'clients'));
+    }
 }

@@ -8,7 +8,7 @@
 <body>
   <div id="app">
     <div class="main-wrapper">
-      <div class="navbar-bg"></div>
+      <div class="navbar-bg" style="background-color: #4682B4"></div>
       <!-- Navbar -->
       @include('layouts.admin-stisla.header')
       

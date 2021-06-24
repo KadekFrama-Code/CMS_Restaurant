@@ -12,7 +12,7 @@ class MenulistController extends Controller
     	$title = 'List Menu';
     	$menus = Menu_list::orderBy('id', 'asc')->get();
 
-    	return view('cms.menu_list', compact('title', 'menus'));
+    	return view('cms.menu.menu_list', compact('title', 'menus'));
     }
 
     public function index2()
@@ -26,7 +26,7 @@ class MenulistController extends Controller
     public function create()
     {
     	$title = 'Tambah Data Menu';
-    	return view('cms.create', compact('title'));
+    	return view('cms.menu.create', compact('title'));
     }
 
     public function store(Request $request)
