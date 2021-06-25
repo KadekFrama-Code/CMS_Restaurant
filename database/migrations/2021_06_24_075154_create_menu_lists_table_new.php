@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMenuListsTable extends Migration
+class CreateMenuListsTableNew extends Migration
 {
     /**
      * Run the migrations.
@@ -16,6 +16,7 @@ class CreateMenuListsTable extends Migration
         Schema::create('tb_menu_list', function (Blueprint $table) {
             $table->id();
             $table->integer('menu_id')->nullable();
+            $table->bigInteger('users')->unsigned();
             $table->string('nama');
             $table->string('deskripsi');
             $table->text('photo');
@@ -23,6 +24,9 @@ class CreateMenuListsTable extends Migration
             $table->text('gambar_label');
             $table->text('gambar_url');
             $table->timestamps();
+
+            $table->foreign('users')->references('id')->on('users')->onDelete('restrict');
+            $table->engine = 'InnoDB';
         });
     }
 
@@ -33,6 +37,6 @@ class CreateMenuListsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('menu_lists');
+        Schema::dropIfExists('menu_lists_table_new');
     }
 }

@@ -10,7 +10,9 @@
                     <button class="btn btn-sm btn-flat btn-warning btn-refresh"><i class="fa fa-refresh"></i> Refresh</button>
                 </p>
             </div>
+
             <div class="box-body">
+              @if($cek < 3)
                 <form role="form" method="post" action="{{ url('/cms/produk/add') }}" enctype="multipart/form-data">
                     @csrf
                   <div class="box-body">
@@ -52,6 +54,9 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
               </div>
             </form>
+            @else
+            <h1>Maaf, kuota habis !!!</h1>
+            @endif
                
             </div>
         </div>

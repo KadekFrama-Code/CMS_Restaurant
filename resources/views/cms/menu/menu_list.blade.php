@@ -57,11 +57,6 @@
                 </tr>
                 @endforeach
               </tbody>
-              <tfoot>
-                <th>
-                  <p>TEST123</p>
-                </th>
-              </tfoot>
             </table>
             </div>
             </div>

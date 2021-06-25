@@ -26,7 +26,9 @@ class MenulistController extends Controller
     public function create()
     {
     	$title = 'Tambah Data Menu';
-    	return view('cms.menu.create', compact('title'));
+        $cek = Menu_list::where('users', \Auth::user()->id)->count();
+
+    	return view('cms.menu.create', compact('title','cek'));
     }
 
     public function store(Request $request)
