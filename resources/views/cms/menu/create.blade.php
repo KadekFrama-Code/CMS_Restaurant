@@ -12,39 +12,36 @@
             </div>
 
             <div class="box-body">
-              @if($cek < 3)
+              @if($cek < 4)
                 <form role="form" method="post" action="{{ url('/cms/produk/add') }}" enctype="multipart/form-data">
                     @csrf
                   <div class="box-body">
 
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Nama Produk</label>
-                      <input type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Nama Produk ...">
-                    </div>
+
 
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Deskripsi</label>
-                      <input type="text" name="deskripsi" class="form-control" id="exampleInputEmail1" placeholder="Deskripsi">
+                      <label for="exampleInputPassword1">Gambar Menu</label>
+                      <input type="file" class="form-control" name="gambar_url" id="exampleInputfile" autocomplete="off">
+                      @error('gambar_url')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                      @enderror
                     </div>
-
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Photo Produk</label>
-                      <input type="file" class="form-control" name="photo" id="exampleInputfile" autocomplete="off">
-                    </div>
-
+<!-- 
                     <div class="form-group">
                       <label for="exampleInputEmail1">Gambar Posisi</label>
                       <input type="text" name="gambar_posisi" class="form-control" id="exampleInputEmail1" placeholder="Posisi Gambar">
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
                       <label for="exampleInputEmail1">Gambar Label</label>
-                      <input type="text" name="gambar_label" class="form-control" id="exampleInputEmail1" placeholder="Mobile/Desktop">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Gambar URL</label>
-                      <input type="text" name="gambar_url" class="form-control" id="exampleInputEmail1" placeholder="URL Gambar">
+                      <select name="gambar_label" class="form-control" id="exampleInputEmail1">
+                        <option value="">Pilih</option>
+                        <option value="desktop">Desktop</option>
+                        <option value="mobile">Mobile</option>
+                      </select>
+                      @error('gambar_label')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                      @enderror
                     </div>
 
               </div>

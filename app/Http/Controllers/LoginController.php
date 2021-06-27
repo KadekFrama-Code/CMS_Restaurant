@@ -11,9 +11,9 @@ class LoginController extends Controller
     {
     	// dd($request->all());
     	if(Auth::guard('client')->attempt(['email' => $request->email, 'password' => $request->password])){
-    		return redirect('/produk');
+    		return redirect('/cms/produk');
     	}elseif(Auth::guard('user')->attempt(['email' => $request->email, 'password' => $request->password])){
-            return redirect('/cms/produk');
+            return redirect('/daftar-clients');
         }
     	return redirect('/login');
     }

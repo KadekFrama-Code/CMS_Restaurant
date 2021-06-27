@@ -10,7 +10,7 @@ class MenulistController extends Controller
     public function index()
     {
     	$title = 'List Menu';
-    	$menus = Menu_list::orderBy('id', 'asc')->get();
+    	$menus = Menu_list::where('users', \Auth::user()->id)->get();
 
     	return view('cms.menu.menu_list', compact('title', 'menus'));
     }
@@ -33,26 +33,34 @@ class MenulistController extends Controller
 
     public function store(Request $request)
     {
+        $message = [
+            'required' => ':attribute harus diisi Jhon !!!',
+            'max' => ':attribute harus diisi minimal :max karakter Jhon !!!',
+            'min' => ':attribute harus diisi minimal :min karakter Jhon !!!',
+        ];
 
-    	$file = $request->file('photo');
+        $this->validate($request,[
+            'gambar_url' => 'required',
+            'gambar_label' => 'required',
+        ],$message);
+
+    	$file = $request->file('gambar_url');
         if($file){
             $nama_file = $file->getClientOriginalName();
             $file->move('image', $nama_file);
-            $photo = 'image/'.$nama_file;
+            $gambar_url = 'image/'.$nama_file;
         }else{
-            $photo = null;
+            $gambar_url = null;
         }
 
         $menu = new Menu_list;
-    	$menu->nama = $request->nama;
-    	$menu->deskripsi = $request->deskripsi;
-    	$menu->gambar_posisi = $request->gambar_posisi;
+        $menu->users = auth()->id();
+    	// $menu->gambar_posisi = $request->gambar_posisi;
+        $menu->gambar_url = $gambar_url;
     	$menu->gambar_label = $request->gambar_label;
-    	$menu->gambar_url = $request->gambar_url;
-    	$menu->photo = $photo;
     	$menu->created_at = date('Y-m-d H:i:s');
         $menu->save();
 
-        return redirect()->back();
+        return redirect('/cms/produk');
     }
 }

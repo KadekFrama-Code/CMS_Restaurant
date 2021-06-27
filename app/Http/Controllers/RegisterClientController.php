@@ -16,14 +16,20 @@ class RegisterClientController extends Controller
 	}
     public function postregister(Request $request)
     {
+        $message = [
+            'required' => ':attribute harus diisi Jhon !!!',
+            'max' => ':attribute harus diisi minimal :max karakter Jhon !!!',
+            'min' => ':attribute harus diisi minimal :min karakter Jhon !!!',
+        ];
+
     	$this->validate($request,[
-    		'name' => 'required',
+    		'name' => 'required|max:40',
     		'username' => 'required',
     		'password' => 'required',
     		'nama_resto' => 'required',
     		'path_url' => 'required',
-    		'max_file' => 'required'
-    	]);
+    		'max_file' => 'required|numeric'
+    	],$message);
 
     		$clients['name'] = $request->name;
     		$clients['username'] = $request->username;
@@ -39,7 +45,7 @@ class RegisterClientController extends Controller
     		Client::insert($clients);
     		Tb_client::insert($tb_client);
 
-    		return redirect('/');
+    		return redirect()->back()->with('record_added', "Berhasil ditambahkan !");
 
     }
 

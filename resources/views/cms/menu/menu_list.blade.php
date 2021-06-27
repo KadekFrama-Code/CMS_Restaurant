@@ -20,12 +20,9 @@
                 <thead>
                   <tr>
                     <th>No</th>
-                    <th>Nama</th>
-                    <th>Deskripsi</th>
-                    <th>Photo</th>
-                    <th>Posisi</th>
+                    <!-- <th>Posisi</th> -->
                     <th>Label</th>
-                    <th>URL</th>
+                    <th>Gambar</th>
                     <th>Tgl Upload</th>
                     <th>Tgl Update</th>
                     <th><center>Action</center></th>
@@ -34,14 +31,11 @@
                 @foreach($menus as $index=>$menu)
                 <tr>
                   <td>{{ $index+1 }}</td>
-                  <td>{{ $menu->nama }}</td>
-                  <td>{{ $menu->deskripsi }}</td>
-                  <td>
-                    <img src="{{ asset($menu->photo) }} " style="width: 80px;">
-                  </td>
-                  <td>{{ $menu->gambar_posisi }}</td>
+                  <!-- <td>{{ $menu->gambar_posisi }}</td> -->
                   <td>{{ $menu->gambar_label }}</td>
-                  <td>{{ $menu->gambar_url }}</td>
+                  <td>
+                    <img src="{{ asset($menu->gambar_url) }} " style="width: 80px;">
+                  </td>
                   <td>{{ $menu->created_at }}</td>
                   <td>{{ $menu->updated_at }}</td>
                   <td>

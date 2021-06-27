@@ -25,12 +25,6 @@ Route::get('/', function () {
 
 	Route::post('/postlogin', 'LoginController@postlogin')->name('postlogin');
 
-/*Register Route*/
-	Route::get('/register', 'RegisterClientController@add')->name('register');
-	Route::post('/postregister', 'RegisterClientController@postregister')->name('postregister');
-
-	Route::get('/daftar-clients', 'RegisterClientController@list_client');
-
 /*Logout Route*/
 	Route::get('/keluar', 'LoginController@logout')->name('logout');
 
@@ -38,20 +32,41 @@ Route::get('/', function () {
 
 
 Route::group(['middleware' => ['auth:user', 'ceklevel:admin']], function(){
+
+/*Register Clients Route*/
+	Route::get('/register', 'RegisterClientController@add')->name('register');
+	Route::post('/postregister', 'RegisterClientController@postregister')->name('postregister');
+
+	Route::get('/daftar-clients', 'RegisterClientController@list_client');
+
+
+/*
 	Route::get('/produk', 'MenulistController@index2');
 	Route::get('/cms/produk', 'MenulistController@index');
 	Route::get('/cms/produk/create', 'MenulistController@create');
 	Route::post('/cms/produk/add', 'MenulistController@store');
 
+	Route::get('/cms/seo-setting/', 'SeosettingController@index');
+	// Route::get('/cms/seo-setting/{id}', 'SeosettingController@store');
+	Route::get('/cms/seo-setting/{id}', 'SeosettingController@edit');
+	Route::put('/cms/seo-setting/{id}', 'SeosettingController@update');*/
+});
 
+
+Route::group(['middleware' => ['auth:client', 'ceklevel:client']], function(){
+
+/*Menulist Route*/
+	Route::get('/produk', 'MenulistController@index2');
+	Route::get('/cms/produk', 'MenulistController@index');
+	Route::get('/cms/produk/create', 'MenulistController@create');
+	Route::post('/cms/produk/add', 'MenulistController@store');
+
+/*Seo-Setting Route*/
 	Route::get('/cms/seo-setting/', 'SeosettingController@index');
 	// Route::get('/cms/seo-setting/{id}', 'SeosettingController@store');
 	Route::get('/cms/seo-setting/{id}', 'SeosettingController@edit');
 	Route::put('/cms/seo-setting/{id}', 'SeosettingController@update');
 });
-
-
-
 
 
 
