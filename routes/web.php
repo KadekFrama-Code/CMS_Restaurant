@@ -48,6 +48,7 @@ Route::group(['middleware' => ['auth:user', 'ceklevel:admin']], function(){
 	// Route::get('/cms/seo-setting/{id}', 'SeosettingController@store');
 	Route::get('/cms/seo-setting/{id}', 'SeosettingController@edit');
 	Route::put('/cms/seo-setting/{id}', 'SeosettingController@update');
+	//
 });
 
 
